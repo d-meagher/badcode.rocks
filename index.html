@@ -33,6 +33,10 @@
 <body>
     <main>
         <article class="card">
+            <section class="welcome">
+                <aside>Welcome to my web page</aside>
+                <div id="the-clock"></div>
+            </section>
             <header>
                 <figure>
                     <img src="./images/stippled-dylan.png" alt="Dylan Meagher" class="profile-image">
@@ -40,7 +44,8 @@
                 </figure>
                 <div class="intro">
                     <h1 class="title">It's me, Dylan.</h1>
-                    <p class="subtitle">Muddling through with <i>bad code</i> that mostly works and <i>rushed design</i>
+                    <p class="subtitle">Muddling through with <em>bad code</em> that mostly works and <em>rushed
+                            design</em>
                         that gets its point across.</p>
                 </div>
             </header>
@@ -53,25 +58,36 @@
             </section>
 
             <section>
-                <h2 class="section-heading"><i class="ph ph-puzzle-piece"></i>Hobbies</h2>
+                <h2 class="section-heading"><i class="ph ph-paint-brush"></i>Hobbies</h2>
                 <p class="description">
                     Getting little weird projects to 80% done and forgetting them.
                 </p>
             </section>
 
-            <footer class="links">
-                <a href="https://github.com/d-meagher">
-                    <i class="ph ph-github-logo"></i> Github
-                </a>
-                <a href="https://mastodon.social/@spank">
-                    <i class="ph ph-mastodon-logo"></i> Mastodon
-                </a>
-                <a href="https://www.instagram.com/thedailbar/">
-                    <i class="ph ph-instagram-logo"></i> Instagram
-                </a>
+            <section>
+                <h2 class="section-heading"><i class="ph ph-binoculars"></i> Where to find me</h2>
+                <div class="description">
+                    I'm not incredibly active online — but reach out — I'll get back to you.
+                    <ul class="links">
+                        <li><a href="https://github.com/d-meagher"><i class="ph ph-github-logo"></i> Github</a></li>
+                        <li><a href="https://mastodon.social/@spank"><i class="ph ph-mastodon-logo"></i> Mastodon</a>
+                        </li>
+                        <li><a href="https://www.instagram.com/thedailbar/"><i class="ph ph-instagram-logo"></i>
+                                Instagram</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <footer>
+                <span><i class="ph ph-hand"></i> Made by hand, for better or worse.</span>
+                <span><a href="https://github.com/d-meagher/badcode.rocks"></span>Take a gander at the code <i
+                    class="ph ph-code"></i></a></span>
             </footer>
         </article>
     </main>
+
+    <!-- Date Display -->
+    <script src="./scripts/date.js"></script>
 </body>
 
 </html>

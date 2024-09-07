@@ -1,27 +1,40 @@
 @font-face {
     font-family: 'Cooper';
-    src: url('../fonts/Cooper-Regular.woff2') format('woff2');
+    src: url('/fonts/Cooper-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cooper';
-    src: url('../fonts/Cooper-Italic.woff2') format('woff2');
+    src: url('/fonts/Cooper-Italic.woff2') format('woff2');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Cooper';
-    src: url('../fonts/Cooper-Medium.woff2') format('woff2');
+    src: url('/fonts/Cooper-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
 }
 
 * {
-    transition: all 0.3s;
-    font-family: 'Cooper', serif;
+    transition: all 0.3s ease;
+    font-family: Cooper, Georgia, serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+figure {
+    margin: 0;
+}
+
+a,
+a:visited {
+    color: #333;
 }
 
 body {
@@ -29,13 +42,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #100d1f;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(4, 4, 32) 35%, rgb(0, 0, 0) 100%);
     margin: 0;
-    color: #333;
+    color: #000;
 }
 
 .card {
     background-color: #efeef6;
+    border-radius: 12px;
     padding: 30px;
     width: 480px;
     text-align: left;
@@ -44,13 +59,19 @@ body {
     line-height: 1.6;
 }
 
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cac7da;
+}
+
 header {
     display: flex;
     flex-direction: row;
-}
-
-figure {
-    margin: 0;
 }
 
 .profile-image {
@@ -65,64 +86,85 @@ figcaption {
     font-style: italic;
 }
 
-
 .intro {
     margin-left: 15px;
     margin-bottom: 30px;
 }
 
 .title {
-    font-family: 'Cooper', serif;
+    font-family: Cooper, Georgia, serif;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 46px;
     margin-bottom: 10px;
 }
 
-.subtitle {
-    font-size: 18px;
+.subtitle,
+.subtitle em,
+.description {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
     color: #555;
     margin-top: -5px;
     margin-bottom: 20px;
 }
 
-.section-heading {
-    font-family: 'Cooper', serif;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
 .description {
-    font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
     color: #333;
 }
 
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
 .links {
-    margin-top: 10px;
-    padding-top: 20px;
-    border-top: 1px solid #cac7da;
+    margin-top: 8px;
     display: flex;
     gap: 10px;
 }
 
 .links a {
+    font-size: 14px;
+    border: 2px dotted #333;
+    padding: 2px 12px;
+    border-radius: 7px;
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .links a:hover {
+    border-color: #000;
     color: #000;
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #cac7da;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 13px;
+    font-style: italic;
+}
+
 @media (max-width: 768px) {
+    * {
+        text-align: center;
+    }
+
     .card {
         max-width: 300px;
-        padding: 20px;
+    }
+
+    header {
+        flex-direction: column;
     }
 
     header img {
@@ -130,12 +172,12 @@ figcaption {
         height: 60px;
     }
 
-    .title {
-        font-size: 2.5rem;
+    .section-heading {
+        justify-content: center;
     }
 
-    .subtitle {
-        font-size: 14px;
+    .title {
+        font-size: 2.5rem;
     }
 
     .section-heading {
@@ -147,6 +189,17 @@ figcaption {
     }
 
     .links {
-        font-size: 14px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links li {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .links a {
+        display: block;
+        text-align: center;
     }
 }
