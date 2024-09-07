@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Cooper';
+    src: url('../fonts/Cooper-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cooper';
+    src: url('../fonts/Cooper-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cooper';
+    src: url('../fonts/Cooper-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    transition: all 0.3s;
+    font-family: 'Cooper', serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #100d1f;
+    margin: 0;
+    color: #333;
+}
+
+.card {
+    background-color: #efeef6;
+    padding: 30px;
+    width: 480px;
+    text-align: left;
+    color: #1d1d1d;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+figure {
+    margin: 0;
+}
+
+.profile-image {
+    border-radius: 50%;
+    max-width: 110px;
+    max-height: 110px;
+}
+
+figcaption {
+    font-size: 14px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+.intro {
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-family: 'Cooper', serif;
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    font-family: 'Cooper', serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    color: #333;
+}
+
+.links {
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #cac7da;
+    display: flex;
+    gap: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 300px;
+        padding: 20px;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .links {
+        font-size: 14px;
+    }
+}
